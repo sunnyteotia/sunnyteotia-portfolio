@@ -1,32 +1,32 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { ArrowLeft, Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { projects, Project } from "@/data/projects";
+import React from "react";
 
-interface ProjectPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function ProjectPage({ params }: ProjectPageProps) {
+export default function ProjectPage() {
   const router = useRouter();
+  const params = useParams();
   const [project, setProject] = useState<Project | null>(null);
 
   useEffect(() => {
-    const foundProject = projects.find((p) => p.id === params.slug);
+    // Safely access slug from params
+    const slug = params?.slug?.toString() || "";
+    
+    const foundProject = projects.find((p) => p.id === slug);
     if (foundProject) {
       setProject(foundProject);
     } else {
       router.push("/projects");
     }
-  }, [params.slug, router]);
+  }, [params, router]);
 
   if (!project) {
     return (
@@ -62,14 +62,15 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </h1>
 
               {project.image && (
-                <div className="rounded-lg overflow-hidden mb-6">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-auto"
-                    width={1200}
-                    height={630}
-                  />
+                <div className="rounded-lg overflow-hidden mb-6 relative aspect-video">
+                    <Image
+                        src={project.image}
+                        alt={project.title}
+                        className="object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                        priority
+                    />
                 </div>
               )}
 

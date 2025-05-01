@@ -21,7 +21,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t bg-background py-6">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex flex-col gap-1">
             <Link href="/" className="text-lg font-bold">

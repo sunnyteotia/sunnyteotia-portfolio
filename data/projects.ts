@@ -5,7 +5,7 @@ export interface Project {
     longDescription?: string;
     technologies: string[];
     achievements: string[];
-    image?: string;
+    image: string; // Make this required now that we have images
     github?: string;
     liveUrl?: string;
     featured: boolean;
@@ -24,6 +24,7 @@ export interface Project {
         "Implemented role-based access and interactive features like community hubs, increasing session duration by 65%",
         "Eliminated third-party dependencies and automated royalty payouts, reducing overhead and platform latency by 30%"
       ],
+      image: "/images/projects/zenith/zenith.jpg", // Path to your image
       github: "https://github.com/achyut21/zenith",
       featured: true
     },
@@ -39,9 +40,25 @@ export interface Project {
         "Integrated Aptos wallet authentication to ease 120+ NFT trades with real-time feedback",
         "Crafted a pixel art-inspired UI/UX using Tailwind CSS and Three.js, improving user engagement by 60%"
       ],
+      image: "/images/projects/pokearena/pokearena.jpg", // Path to your image
       github: "https://github.com/achyut21/pokearena",
       featured: true
     },
+    {
+        id: "infinitus",
+        title: "Infinitus'24",
+        description: "Led the development of the Infinitus Fest website, attracting 20,000 students with 6,000 registrations.",
+        longDescription: "Led the development of the Infinitus Fest website, attracting 20,000 students with 6,000 registrations across 10 events, optimizing for crowd loading. Integrated payment gateway for Cultural and Technical events.",
+        technologies: ["Next.js", "Tailwind CSS", "Node.js", "Three.js"],
+        achievements: [
+          "Attracted 20,000 students with 6,000 registrations across 10 events",
+          "Emphasized crowd loading optimization for seamless user experience",
+          "Integrated payment gateway for Cultural and Technical events"
+        ],
+        image: "/images/projects/infinitus/infinitus.jpg", // Path to your image
+        github: "https://github.com/achyut21/infinitus24",
+        featured: false
+      },
     {
       id: "byteroot",
       title: "Byteroot",
@@ -53,21 +70,8 @@ export interface Project {
         "Built an ecosystem for collaborative problem-solving and group discussions",
         "Integrated Piston API for compiler outputs, enhancing code execution by 40%"
       ],
+      image: "/images/projects/byteroot/byteroot.jpg", // Path to your image
       github: "https://github.com/achyut21/byteroot",
       featured: true
-    },
-    {
-      id: "infinitus",
-      title: "Infinitus'24",
-      description: "Led the development of the Infinitus Fest website, attracting 20,000 students with 6,000 registrations.",
-      longDescription: "Led the development of the Infinitus Fest website, attracting 20,000 students with 6,000 registrations across 10 events, optimizing for crowd loading. Integrated payment gateway for Cultural and Technical events.",
-      technologies: ["Next.js", "Tailwind CSS", "Node.js", "Three.js"],
-      achievements: [
-        "Attracted 20,000 students with 6,000 registrations across 10 events",
-        "Emphasized crowd loading optimization for seamless user experience",
-        "Integrated payment gateway for Cultural and Technical events"
-      ],
-      github: "https://github.com/achyut21/infinitus24",
-      featured: false
     }
   ];

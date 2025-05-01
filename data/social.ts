@@ -15,7 +15,7 @@ export interface SocialLink {
     {
       id: "linkedin",
       name: "LinkedIn",
-      url: "https://linkedin.com/achyutkatiyar2103",
+      url: "https://www.linkedin.com/in/achyutkatiyar2103/",
       icon: "linkedin"
     },
     {

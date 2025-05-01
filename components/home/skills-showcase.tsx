@@ -3,8 +3,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SkillIcon } from "@/components/skill-icon";
+import { TechIcon } from "@/components/tech-icon";
 import { Badge } from "@/components/ui/badge";
 import { skills, SkillCategory } from "@/data/skills";
+
 
 export function SkillsShowcase() {
   const [activeTab, setActiveTab] = useState<SkillCategory>("Languages");
@@ -12,7 +15,7 @@ export function SkillsShowcase() {
 
   return (
     <section className="py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto max-w-6xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,12 +65,13 @@ export function SkillsShowcase() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: index * 0.05 }}
                       >
-                        <Badge 
-                          variant="outline" 
-                          className="text-sm py-2 px-4 bg-background hover:bg-accent transition-colors"
+                    <Badge 
+                        variant="outline" 
+                        className="text-sm py-2 px-4 bg-background hover:bg-accent transition-colors flex items-center gap-2"
                         >
-                          {skill.name}
-                        </Badge>
+                        <TechIcon logoKey={skill.logoKey} name={skill.name} className="h-5 w-5" />
+                        {skill.name}
+                    </Badge>
                       </motion.div>
                     ))}
                   </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,17 +20,18 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="h-full flex flex-col overflow-hidden border-2 transition-all hover:border-primary">
-      {project.image && (
-        <div className="aspect-video overflow-hidden">
-          <img
+    {project.image && (
+        <div className="aspect-video overflow-hidden relative w-full">
+            <Image
             src={project.image}
             alt={project.title}
-            className="h-full w-full object-cover transition-transform hover:scale-105"
-            width={600}
-            height={400}
-          />
+            className="object-cover object-top"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={project.featured}
+            />
         </div>
-      )}
+        )}
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
         <CardDescription>{project.description}</CardDescription>
@@ -48,7 +50,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <ul className="space-y-2 text-sm text-muted-foreground">
           {project.achievements.slice(0, 2).map((achievement, i) => (
             <li key={i} className="flex items-start">
-              <ArrowRight className="mr-2 h-4 w-4 text-primary mt-0.5" />
+              <ArrowRight className="mr-2 h-4 w-4 text-primary mt-0.5 shrink-0" />
               <span>{achievement}</span>
             </li>
           ))}

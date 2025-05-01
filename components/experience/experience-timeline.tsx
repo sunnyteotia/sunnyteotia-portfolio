@@ -1,3 +1,4 @@
+// components/experience/experience-timeline.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -10,7 +11,7 @@ import { experiences } from "@/data/experience";
 export function ExperienceTimeline() {
   return (
     <section className="py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

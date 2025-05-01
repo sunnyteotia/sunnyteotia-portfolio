@@ -9,7 +9,7 @@ import { skills, SkillCategory } from "@/data/skills";
 export default function AboutPage() {
   return (
     <section className="py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

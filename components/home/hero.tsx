@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { socialLinks } from "@/data/social";
 import { skills } from "@/data/skills";
 
@@ -26,7 +27,7 @@ export function Hero() {
 
   return (
     <section className="relative py-12 md:py-24 overflow-hidden">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
@@ -99,20 +100,17 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex items-center justify-center"
           >
-            <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-full border bg-muted p-2">
-              <div className="h-full w-full rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1">
-                <div className="h-full w-full rounded-full bg-background p-4">
-                  <div className="h-full w-full overflow-hidden rounded-full bg-muted">
-                    <img
-                      src="/images/profile.jpg"
-                      alt="Achyut Katiyar"
-                      width={400}
-                      height={400}
-                      className="h-full w-full object-cover"
+            <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-full border bg-muted">
+              <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-full">
+                    <Image
+                        src="/images/profile.jpg"
+                        alt="Achyut Katiyar"
+                        fill
+                        className="object-cover"
+                        priority
+                        sizes="(max-width: 768px) 100vw, 400px"
                     />
-                  </div>
                 </div>
-              </div>
               <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-transparent via-blue-300/10 to-transparent animate-[shimmer_2s_infinite]"></div>
             </div>
           </motion.div>

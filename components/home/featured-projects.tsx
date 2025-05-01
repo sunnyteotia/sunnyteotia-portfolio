@@ -21,7 +21,7 @@ export function FeaturedProjects() {
 
   return (
     <section id="projects" className="py-12 md:py-24 bg-muted/50">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto text-center">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
