@@ -91,7 +91,7 @@ export interface Project {
         image: "/images/projects/billrewards/billrewards.jpg",
         github: "https://github.com/achyut21/billrewards",
         liveUrl: "https://devpost.com/software/billrewards",
-        featured: true
+        featured: false
     },
     {
       id: "byteroot",
@@ -106,6 +106,6 @@ export interface Project {
       ],
       image: "/images/projects/byteroot/byteroot.jpg", // Path to your image
       github: "https://github.com/achyut21/byteroot",
-      featured: true
+      featured: false
     }
   ];

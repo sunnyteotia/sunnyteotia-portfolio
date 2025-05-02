@@ -8,10 +8,11 @@ export interface Experience {
     endDate: string;
     description: string;
     achievements: string[];
-    type?: 'work' | 'research'; // Add type to distinguish work from research
+    type?: 'work' | 'research' | 'education' | 'leadership';
   }
   
   export const experiences: Experience[] = [
+    // Regular job positions
     {
       id: "full-stack-dev",
       title: "Full Stack Web Developer",
@@ -44,6 +45,7 @@ export interface Experience {
       ],
       type: 'work'
     },
+    // Research positions
     {
       id: "ddos-detection",
       title: "DDoS Attack Detection using Deep Learning",
@@ -75,5 +77,69 @@ export interface Experience {
         "Optimized the algorithm for efficiency and reliability in making personalized education recommendations"
       ],
       type: 'research'
-    }
+    },
+    {
+        id: "technical-executive",
+        title: "Technical Executive",
+        company: "Student Council SRM University - AP",
+        location: "Vijayawada, India",
+        startDate: "August 2023",
+        endDate: "May 2024",
+        description: "Oversaw technical operations for university events and initiatives as part of the Student Council.",
+        achievements: [
+          "Oversaw technical operations, utilizing advanced methodologies to achieve project milestones",
+          "Engineered and enhanced event websites for cultural festivals, ensuring top-tier performance with creative designs",
+          "Managed audiovisual equipment, software applications, and ensured seamless online and offline interactions",
+          "Resolved technical issues promptly, minimizing disruptions and maintaining high standards of execution"
+        ],
+        type: 'leadership'
+      },
+      {
+        id: "technical-convener",
+        title: "Technical Team Convener",
+        company: "Student Council SRM University - AP",
+        location: "Vijayawada, India",
+        startDate: "May 2022",
+        endDate: "May 2024",
+        description: "Led the university's technical team, organizing and executing technical aspects of student events.",
+        achievements: [
+          "Led multidisciplinary technical team, achieving seamless collaboration and innovative solutions",
+          "Organized brainstorming sessions with team members to generate website ideas and review progress",
+          "Increased student engagement by 40% through committee formation and industry-aligned website redesigns",
+          "Bridged the gap between technical requirements and student initiatives"
+        ],
+        type: 'leadership'
+      },
+      {
+        id: "student-council-member",
+        title: "Member",
+        company: "Student Council SRM University - AP",
+        location: "Andhra Pradesh, India",
+        startDate: "May 2021",
+        endDate: "May 2022",
+        description: "Served as an active member of the university's student council, contributing to student initiatives.",
+        achievements: [
+          "Played a pivotal role in organizing and executing various student events and initiatives",
+          "Collaborated effectively with peers and faculty ensuring the smooth execution of events",
+          "Enhanced the overall student experience through meticulous planning and coordination",
+          "Contributed to website development and technical aspects of student programs"
+        ],
+        type: 'leadership'
+      },
+      {
+        id: "student-council-affiliate",
+        title: "Affiliate",
+        company: "Student Council SRM University - AP",
+        location: "Vijayawada, India",
+        startDate: "November 2020",
+        endDate: "May 2021",
+        description: "Started as an affiliate member in the student council, supporting various initiatives.",
+        achievements: [
+          "Assisted in the organization and execution of student events",
+          "Supported the technical team with website and digital content",
+          "Contributed to planning and logistics for university programs",
+          "Participated in student engagement activities and feedback collection"
+        ],
+        type: 'leadership'
+      }
   ];

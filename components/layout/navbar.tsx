@@ -92,16 +92,17 @@ export function Navbar() {
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 100,
+        stiffness: 300,
         damping: 20,
-        mass: 1
+        mass: 0.5,
+        duration: 0.1
       }
     },
     exit: {
       y: -100,
       opacity: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.1,
         ease: "easeInOut"
       }
     }
@@ -114,7 +115,7 @@ export function Navbar() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.1 + i * 0.1,
+        delay: 0.05 * i,
         duration: 0.5,
         ease: "easeOut"
       }
