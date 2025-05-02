@@ -27,7 +27,7 @@ export default function ContactPage() {
 
   return (
     <section className="py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <SectionHeader
           title="Get In Touch"
           subtitle="Have a project in mind or want to collaborate? I'd love to hear from you!"

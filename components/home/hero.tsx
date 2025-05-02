@@ -3,9 +3,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { socialLinks } from "@/data/social";
 
 export function Hero() {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -20,7 +21,6 @@ export function Hero() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 150]); // Text moves slower
   const y2 = useTransform(scrollY, [0, 500], [0, 250]); // Image moves faster
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,6 +29,22 @@ export function Hero() {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Get icon component for social links
+  const getIconComponent = (iconName: string) => {
+    switch (iconName) {
+      case "github":
+        return <Github className="h-5 w-5" />;
+      case "linkedin":
+        return <Linkedin className="h-5 w-5" />;
+      case "mail":
+        return <Mail className="h-5 w-5" />;
+      case "phone":
+        return <Phone className="h-5 w-5" />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <section className="relative py-12 md:py-24 overflow-hidden">
@@ -91,6 +107,8 @@ export function Hero() {
                 at Northeastern University.
               </motion.p>
             </div>
+            
+            {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -109,6 +127,38 @@ export function Hero() {
                   Resume
                 </a>
               </Button>
+            </motion.div>
+            
+            {/* Social Links - Added here from navbar */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex gap-3 pt-2"
+            >
+              {socialLinks.map((social, i) => (
+                <motion.div
+                  key={social.id}
+                  whileHover={{ y: -3, scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    asChild
+                    className="rounded-full bg-muted/50 hover:bg-primary/10"
+                  >
+                    <a 
+                      href={social.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      aria-label={social.name}
+                    >
+                      {getIconComponent(social.icon)}
+                    </a>
+                  </Button>
+                </motion.div>
+              ))}
             </motion.div>
           </motion.div>
           

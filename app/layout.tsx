@@ -2,7 +2,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
@@ -12,6 +11,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { ScrollProgress } from "@/components/shared/scroll-progress";
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider";
+import { StarsCanvas } from "@/components/star-background";
+import { BlackHoleVideo } from "@/components/black-hole-video";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -45,8 +46,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -62,6 +61,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* StarsCanvas will only render in dark mode and on client-side */}
+          <StarsCanvas />
+          <BlackHoleVideo />
           <SmoothScrollProvider>
             <div className="relative flex min-h-screen flex-col">
               <Navbar />

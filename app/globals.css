@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -112,6 +114,26 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* Dark mode enhancements */
+.dark body {
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(55, 65, 120, 0.2) 0%, transparent 70%),
+    radial-gradient(circle at 100% 0%, rgba(70, 40, 120, 0.1) 0%, transparent 40%);
+}
+
+/* Improved animations for dark mode */
+.dark [data-scroll].in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Slightly slower animations for dark mode */
+}
+
+/* Make sure the video is fully opaque in dark mode */
+.dark .black-hole-video {
+  opacity: 0.6 !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -183,4 +205,14 @@ html {
 }
 [data-scroll="fade"].in-view {
   opacity: 1;
+}
+
+.variable-font {
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: 'wght' 400;
+  transition: font-variation-settings 0.3s ease;
+}
+
+.variable-font:hover {
+  font-variation-settings: 'wght' 600;
 }
