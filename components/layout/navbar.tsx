@@ -132,8 +132,8 @@ export function Navbar() {
           className={cn(
             "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 transition-all duration-300 rounded-xl py-3 px-4",
             isScrolled 
-              ? "bg-background/85 backdrop-blur-md border shadow-lg" 
-              : "bg-background/50 backdrop-blur-sm border"
+              ? "bg-background/60 backdrop-blur-md border shadow-lg" 
+              : "bg-background/30 backdrop-blur-sm border"
           )}
         >
           <div className="flex items-center justify-between">

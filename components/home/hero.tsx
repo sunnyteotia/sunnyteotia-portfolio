@@ -1,12 +1,11 @@
+// components/home/hero.tsx
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { socialLinks } from "@/data/social";
-import { skills } from "@/data/skills";
 
 export function Hero() {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -16,6 +15,12 @@ export function Hero() {
     "Machine Learning Practitioner",
     "UI/UX Designer"
   ];
+
+  // Parallax effect setup
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 500], [0, 150]); // Text moves slower
+  const y2 = useTransform(scrollY, [0, 500], [0, 250]); // Image moves faster
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,9 +32,21 @@ export function Hero() {
 
   return (
     <section className="relative py-12 md:py-24 overflow-hidden">
+      {/* Background elements with parallax effect */}
+      <motion.div 
+        className="absolute inset-0 -z-10"
+        style={{ y: useTransform(scrollY, [0, 1000], [0, 300]) }}
+      >
+        <div className="absolute right-0 top-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl opacity-70" />
+        <div className="absolute left-20 bottom-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-60" />
+      </motion.div>
+
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="flex flex-col justify-center space-y-4">
+          <motion.div 
+            className="flex flex-col justify-center space-y-4"
+            style={{ y: y1 }}
+          >
             <div className="space-y-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -93,25 +110,24 @@ export function Hero() {
                 </a>
               </Button>
             </motion.div>
-          </div>
+          </motion.div>
+          
           <motion.div
+            className="flex items-center justify-center"
+            style={{ y: y2 }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex items-center justify-center"
           >
-            <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-full border bg-muted">
-              <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-full">
-                    <Image
-                        src="/images/profile.jpg"
-                        alt="Achyut Katiyar"
-                        fill
-                        className="object-cover"
-                        priority
-                        sizes="(max-width: 768px) 100vw, 400px"
-                    />
-                </div>
-              <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-transparent via-blue-300/10 to-transparent animate-[shimmer_2s_infinite]"></div>
+            <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-full">
+              <Image
+                src="/images/profile.jpg"
+                alt="Achyut Katiyar"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
             </div>
           </motion.div>
         </div>

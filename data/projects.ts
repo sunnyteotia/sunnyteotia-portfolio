@@ -59,6 +59,40 @@ export interface Project {
         github: "https://github.com/achyut21/infinitus24",
         featured: false
       },
+      {
+        id: "lightning-time",
+        title: "Lightning Time",
+        description: "A secure timestamping protocol based on Bitcoin that prevents timestamp forgery and enhances security.",
+        longDescription: "Developed Lightning Time, a secure timestamping protocol leveraging the Bitcoin Lightning Network. The solution prevents timestamp forgery by anchoring timestamps to the Bitcoin blockchain, providing cryptographic proof of existence at a specific point in time with enhanced security and non-repudiation properties.",
+        technologies: ["Bitcoin", "Lightning Network", "Cryptography", "Node.js", "React", "WebSockets"],
+        achievements: [
+          "Created a novel security protocol for tamper-proof timestamping using Bitcoin's Lightning Network",
+          "Implemented end-to-end encryption ensuring data integrity and non-repudiation for critical timestamp data",
+          "Developed a scalable architecture capable of handling thousands of timestamp verifications per second",
+          "Built a user-friendly interface for easy verification of timestamp authenticity"
+        ],
+        image: "/images/projects/lightning-time/lightning-time.jpg",
+        github: "https://github.com/achyut21/lightning-time",
+        liveUrl: "https://devpost.com/software/lightning-time",
+        featured: true
+      },
+      {
+        id: "billrewards",
+        title: "BillRewards",
+        description: "A cashback reward system that incentivizes on-time bill payments with cryptocurrency rewards.",
+        longDescription: "Built BillRewards, an innovative system that encourages timely bill payments by rewarding users with cryptocurrency tokens. The platform integrates with payment processors to track bill payments and automatically distributes rewards for on-time payments, helping service providers reduce late payments while offering users tangible benefits.",
+        technologies: ["Ethereum", "Solidity", "React.js", "Node.js", "Smart Contracts", "Web3.js"],
+        achievements: [
+          "Developed a smart contract-based reward system integrated with multiple payment processors",
+          "Created a token distribution mechanism that automatically rewards on-time payments",
+          "Implemented an analytics dashboard for tracking payment patterns and reward distributions",
+          "Built a secure wallet integration system for claiming and managing reward tokens"
+        ],
+        image: "/images/projects/billrewards/billrewards.jpg",
+        github: "https://github.com/achyut21/billrewards",
+        liveUrl: "https://devpost.com/software/billrewards",
+        featured: true
+    },
     {
       id: "byteroot",
       title: "Byteroot",

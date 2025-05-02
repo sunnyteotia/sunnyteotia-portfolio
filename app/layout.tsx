@@ -1,10 +1,17 @@
-import type { Metadata } from "next";
+// app/layout.tsx
+"use client";
+
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollToTop } from "@/components/shared/scroll-to-top";
+import { ScrollProgress } from "@/components/shared/scroll-progress";
+import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -12,7 +19,6 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-// Using Satoshi display font for headings - you can replace this with any other font
 const fontDisplay = localFont({
   src: [
     {
@@ -34,16 +40,13 @@ const fontDisplay = localFont({
   variable: "--font-display",
 });
 
-export const metadata: Metadata = {
-  title: "Achyut Katiyar | Portfolio",
-  description: "Full Stack Developer & Machine Learning Enthusiast",
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const pathname = usePathname();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -53,17 +56,23 @@ export default function RootLayout({
           fontDisplay.variable
         )}
       >
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="system" 
-          enableSystem 
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1 pt-16">{children}</main>
-            <Footer />
-          </div>
+          <SmoothScrollProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1 pt-16">
+                {children}
+              </main>
+              <Footer />
+            </div>
+            <ScrollToTop />
+            <ScrollProgress />
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>
