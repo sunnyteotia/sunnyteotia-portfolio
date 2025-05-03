@@ -122,7 +122,12 @@ export function Hero() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="/resume.pdf" download>
+                <a 
+                  href="/resume.pdf" 
+                  download="Achyut_Katiyar_Resume.pdf" 
+                  target="_blank"                      
+                  rel="noopener noreferrer"
+                >
                   <Download className="mr-2 h-4 w-4" />
                   Resume
                 </a>
