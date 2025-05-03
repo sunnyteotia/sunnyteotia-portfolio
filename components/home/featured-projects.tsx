@@ -14,7 +14,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 import Link from "next/link";
-import Image from "next/image";
+
 
 export function FeaturedProjects() {
 
