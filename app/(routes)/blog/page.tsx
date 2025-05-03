@@ -1,8 +1,7 @@
-// app/(routes)/blog/page.tsx
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, CalendarDays, Clock, BellRing } from "lucide-react";
+import { CalendarDays, Clock, BellRing } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -38,7 +37,7 @@ export default function BlogPage() {
           </h1>
           
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-            I'm working on some interesting articles about web development, blockchain technology, 
+            I&apos;m working on some interesting articles about web development, blockchain technology, 
             and machine learning. Stay tuned for insightful content!
           </p>
         </motion.div>
@@ -98,7 +97,7 @@ export default function BlogPage() {
               
               {submitted ? (
                 <div className="p-4 bg-primary/10 rounded-lg text-sm">
-                  Thanks for subscribing! I'll notify you when new content is available.
+                  Thanks for subscribing! I&apos;ll notify you when new content is available.
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>

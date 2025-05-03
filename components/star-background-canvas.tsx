@@ -1,11 +1,18 @@
+// components/star-background-canvas.tsx
 "use client";
 
 import { useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
+import * as THREE from "three";
 
-function Stars(props: any) {
-  const ref = useRef<any>();
+// Use proper TypeScript types instead of any
+interface StarsProps {
+  [key: string]: unknown;
+}
+
+function Stars(props: StarsProps) {
+  const ref = useRef<THREE.Points>(null);
   const [sphere] = useState(() => {
     // Create array with explicit size
     const arr = new Float32Array(5000);
@@ -18,7 +25,7 @@ function Stars(props: any) {
     return arr;
   });
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (ref.current) {
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;

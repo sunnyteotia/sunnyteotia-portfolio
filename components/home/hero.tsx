@@ -136,7 +136,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex gap-3 pt-2"
             >
-              {socialLinks.map((social, i) => (
+              {socialLinks.map((social) => (
                 <motion.div
                   key={social.id}
                   whileHover={{ y: -3, scale: 1.1 }}

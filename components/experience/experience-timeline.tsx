@@ -1,8 +1,7 @@
-// components/experience/experience-timeline.tsx
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Microscope, Briefcase, GraduationCap, Award, Users } from "lucide-react";
+import { ArrowRight, MapPin, Microscope, Briefcase, GraduationCap, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";

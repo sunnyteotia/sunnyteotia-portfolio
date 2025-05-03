@@ -9,7 +9,7 @@ import { skills, SkillCategory } from "@/data/skills";
 
 
 export function SkillsShowcase() {
-  const [activeTab, setActiveTab] = useState<SkillCategory>("Languages");
+  const [selectedCategory, setSelectedCategory] = useState<SkillCategory>("Languages");
   const categories = Object.keys(skills) as SkillCategory[];
 
   return (
@@ -37,14 +37,16 @@ export function SkillsShowcase() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-8 md:mt-12"
         >
-          <Tabs defaultValue="Languages" className="w-full">
+          <Tabs defaultValue="Languages" 
+            value={selectedCategory}
+            onValueChange={(value) => setSelectedCategory(value as SkillCategory)}
+            className="w-full">
             <div className="flex justify-center mb-8">
               <TabsList className="flex flex-wrap gap-2 h-auto">
                 {categories.map((category) => (
                   <TabsTrigger
                     key={category}
                     value={category}
-                    onClick={() => setActiveTab(category)}
                     className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                   >
                     {category}

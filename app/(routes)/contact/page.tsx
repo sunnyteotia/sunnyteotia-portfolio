@@ -29,7 +29,7 @@ export default function ContactPage() {
       <div className="container px-4 md:px-6 mx-auto">
         <SectionHeader
           title="Get In Touch"
-          subtitle="Have a project in mind or want to collaborate? I'd love to hear from you!"
+          subtitle="Have a project in mind or want to collaborate? I&apos;d love to hear from you!"
         />
 
         <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
@@ -42,7 +42,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle>Send me a message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as possible.
+                  Fill out the form below and I&apos;ll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>

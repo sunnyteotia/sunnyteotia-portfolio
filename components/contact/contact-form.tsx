@@ -1,4 +1,3 @@
-// components/contact/contact-form.tsx
 "use client";
 
 import { useState } from "react";
@@ -54,7 +53,6 @@ export function ContactForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     
-    // Simulate form submission (replace with actual API call)
     setTimeout(() => {
       console.log(values);
       setIsSubmitting(false);
@@ -96,7 +94,7 @@ export function ContactForm() {
             transition={{ delay: 0.5 }}
             className="text-center text-muted-foreground max-w-md"
           >
-            Thank you for reaching out. I'll get back to you as soon as possible.
+            Thank you for reaching out. I&apos;ll get back to you as soon as possible.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -169,7 +167,7 @@ export function ContactForm() {
                     <FormLabel>Message</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="I'd like to discuss a project opportunity..."
+                        placeholder="I&apos;d like to discuss a project opportunity..."
                         className="min-h-32 resize-none"
                         {...field}
                       />
