@@ -1,4 +1,3 @@
-// components/star-background.tsx
 "use client";
 
 import dynamic from "next/dynamic";

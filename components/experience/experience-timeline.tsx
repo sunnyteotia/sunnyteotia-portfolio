@@ -92,7 +92,7 @@ export function ExperienceTimeline() {
                 
                 {/* Mobile Icon - shown only on mobile */}
                 <div 
-                  className={`md:hidden absolute -translate-y-1/2 ${
+                  className={`md:hidden absolute -translate-y-6 ${
                     index % 2 === 0 
                       ? "left-[calc(50%+12px)]"  // Right of timeline 
                       : "right-[calc(50%+12px)]" // Left of timeline

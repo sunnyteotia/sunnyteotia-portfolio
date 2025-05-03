@@ -1,4 +1,3 @@
-// components/3d-card.tsx
 "use client";
 
 import { useState, useRef } from 'react';

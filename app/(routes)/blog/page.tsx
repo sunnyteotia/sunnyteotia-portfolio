@@ -15,7 +15,6 @@ export default function BlogPage() {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, you would send this to your API
     console.log("Email submitted:", email);
     setSubmitted(true);
     setEmail("");

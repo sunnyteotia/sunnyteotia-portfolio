@@ -1,4 +1,3 @@
-// components/command-palette.tsx
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -11,7 +10,6 @@ import {
   CommandEmpty, 
   CommandGroup,
   CommandItem,
-  CommandShortcut 
 } from '@/components/ui/commands';
 import { Button } from '@/components/ui/button';
 import { socialLinks } from "@/data/social";

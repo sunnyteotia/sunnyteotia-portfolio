@@ -1,4 +1,3 @@
-// components/tech-icon.tsx
 "use client";
 
 import { useState } from 'react';

@@ -16,7 +16,7 @@ import { projects } from "@/data/projects";
 import Link from "next/link";
 
 export function FeaturedProjects() {
-  // Filter featured projects
+
   const featuredProjects = projects.filter(project => project.featured);
 
   return (

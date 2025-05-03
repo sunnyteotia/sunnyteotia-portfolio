@@ -1,4 +1,3 @@
-// components/skill-icon.tsx
 import { 
     Code, FileCode, Braces, FileJson, Type, Coffee, Database, Terminal,
     Globe, Layout, Server, PanelLeft, Palette, Tablet,

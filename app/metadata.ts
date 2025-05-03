@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import { ClientLayout } from "./client-layout";
-import "./globals.css";
+// app/metadata.ts
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Achyut Katiyar",
+  title: "Achyut Katiyar | Portfolio",
   description: "Full Stack Developer & Machine Learning Enthusiast",
   icons: {
     icon: [
@@ -13,11 +12,3 @@ export const metadata: Metadata = {
     apple: { url: "/apple-touch-icon.png", type: "image/png" },
   },
 };
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <ClientLayout>{children}</ClientLayout>;
-}

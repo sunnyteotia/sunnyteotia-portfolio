@@ -6,7 +6,6 @@ import { ProjectCard } from "@/components/projects/project-card";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 
-// Get all unique technologies from all projects
 const allTechnologies = Array.from(
   new Set(projects.flatMap((project) => project.technologies))
 ).sort();
@@ -14,7 +13,6 @@ const allTechnologies = Array.from(
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
-  // Filter projects based on selected technology
   const filteredProjects = activeFilter
     ? projects.filter((project) =>
         project.technologies.includes(activeFilter)

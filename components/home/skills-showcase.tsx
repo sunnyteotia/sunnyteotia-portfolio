@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SkillIcon } from "@/components/skill-icon";
 import { TechIcon } from "@/components/tech-icon";
 import { Badge } from "@/components/ui/badge";
 import { skills, SkillCategory } from "@/data/skills";

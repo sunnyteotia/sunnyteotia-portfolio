@@ -1,4 +1,3 @@
-// components/black-hole-video.tsx
 "use client";
 
 import { useEffect, useState } from "react";
