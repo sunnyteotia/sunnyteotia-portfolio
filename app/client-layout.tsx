@@ -10,6 +10,7 @@ import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { ScrollProgress } from "@/components/shared/scroll-progress";
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
@@ -84,6 +85,7 @@ export function ClientLayout({
             </div>
             <ScrollToTop />
             <ScrollProgress />
+            <SpeedInsights/>
             <Analytics />
           </SmoothScrollProvider>
         </ThemeProvider>
