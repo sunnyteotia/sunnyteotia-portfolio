@@ -1,4 +1,3 @@
-// app/client-layout.tsx
 "use client";
 
 import { Inter as FontSans } from "next/font/google";
@@ -10,10 +9,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { ScrollProgress } from "@/components/shared/scroll-progress";
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider";
+import { Analytics } from "@vercel/analytics/react"
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
-// Dynamic imports for client-only components
 const StarsCanvas = dynamic(() => import("@/components/star-background").then(mod => mod.StarsCanvas), { ssr: false });
 const BlackHoleVideo = dynamic(() => import("@/components/black-hole-video").then(mod => mod.BlackHoleVideo), { ssr: false });
 
@@ -85,6 +84,7 @@ export function ClientLayout({
             </div>
             <ScrollToTop />
             <ScrollProgress />
+            <Analytics />
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>
