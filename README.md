@@ -4,6 +4,8 @@ A modern, responsive portfolio website built with Next.js 14, Tailwind CSS, and 
 
 ![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
 
+Live Website: [https://achyutkatiyar.com](https://www.achyutkatiyar.com/)
+
 ## Table of Contents
 
 - [Overview](#overview)
