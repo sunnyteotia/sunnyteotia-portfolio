@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ClientLayout } from "./client-layout";
-import ogImage from "@/public/images/og-image.jpg";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,9 +21,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height,
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Achyut Katiyar - Portfolio",
       },
     ],
