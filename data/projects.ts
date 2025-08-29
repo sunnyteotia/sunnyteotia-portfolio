@@ -23,7 +23,7 @@ export const projects: Project[] = [
       "Implemented role-based access and beautiful landing Page to increase user involvement",
       "Implemented a comprehensive analytics dashboard for real-time event tracking and 50+ APIs are involved"
     ],
-    image: "/images/projects/udgaar/udgaar.png",
+    image: "/images/projects/udgaar/Udgaar.png",
     github: "https://github.com/ConnectToKrsna/Udgaar-Frontend",
     liveUrl: "https://udgaar.in",
     featured: true
