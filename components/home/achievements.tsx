@@ -14,48 +14,38 @@ interface Achievement {
 const achievements: Achievement[] = [
   {
     icon: <Trophy className="h-6 w-6" />,
-    title: "Winner of Hacker House, Goa ($1500 Prize)",
+    title: "Technical Executive for Viplava Fest, Ghaziabad",
     colorClass: "text-yellow-600 dark:text-yellow-400",
   },
   {
     icon: <Medal className="h-6 w-6" />,
-    title: "Winner of Move it with Aptos Hackathon ($600 Prize)",
+    title: "Best Facilitator Award at Viplava Fest 2024",
     colorClass: "text-blue-600 dark:text-blue-400",
   },
   {
     icon: <Award className="h-6 w-6" />,
-    title: "Winner of HackSRM 5.0 ($500 Prize)",
+    title: "Best Academics Award at Viplava Fest 2023",
     colorClass: "text-green-600 dark:text-green-400",
   },
   {
-    icon: <Trophy className="h-6 w-6" />,
-    title: "Winner of Appthon 1.0",
+    icon: <Code className="h-6 w-6" />,
+    title: "Solved 300+ DSA Problems on LeetCode & GFG",
     colorClass: "text-purple-600 dark:text-purple-400",
   },
   {
-    icon: <BookOpen className="h-6 w-6" />,
-    title: "Convener of ADD (App Design & Development Club)",
-    colorClass: "text-indigo-600 dark:text-indigo-400",
-  },
-  {
     icon: <Cpu className="h-6 w-6" />,
-    title: "DDoS Attack Detection Researcher",
+    title: "Built 5+ Full-Stack Projects using MERN Stack",
     colorClass: "text-red-600 dark:text-red-400",
   },
   {
-    icon: <Code className="h-6 w-6" />,
-    title: "Technical Convener of University Student Council",
-    colorClass: "text-teal-600 dark:text-teal-400",
-  },
-  {
-    icon: <Gamepad className="h-6 w-6" />,
-    title: "3x Valorant Tournament Champion",
-    colorClass: "text-amber-600 dark:text-amber-400",
-  },
-  {
     icon: <Zap className="h-6 w-6" />,
-    title: "Technical Executive of Infinitus (National Level Fest)",
-    colorClass: "text-cyan-600 dark:text-cyan-400",
+    title: "Coordinated 3+ Big Festivals and several camps with 300+ Participants",
+    colorClass: "text-indigo-600 dark:text-indigo-400",
+  },
+  {
+    icon: <BookOpen className="h-6 w-6" />,
+    title: "Monthly 10+ Lectures on Leadership ",
+    colorClass: "text-teal-600 dark:text-teal-400",
   },
 ];
 
@@ -107,9 +97,9 @@ export function Achievements() {
         
         <div className="mt-10 inline-flex flex-wrap justify-center gap-2">
           <Badge variant="secondary" className="text-sm py-1.5 px-3">Technical Leadership</Badge>
-          <Badge variant="secondary" className="text-sm py-1.5 px-3">Hackathon Winner</Badge>
-          <Badge variant="secondary" className="text-sm py-1.5 px-3">Research</Badge>
-          <Badge variant="secondary" className="text-sm py-1.5 px-3">Gaming</Badge>
+          <Badge variant="secondary" className="text-sm py-1.5 px-3">Youth Facilitator</Badge>
+          <Badge variant="secondary" className="text-sm py-1.5 px-3">Manager</Badge>
+          <Badge variant="secondary" className="text-sm py-1.5 px-3">Mentor</Badge>
         </div>
       </div>
     </section>

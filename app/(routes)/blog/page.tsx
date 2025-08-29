@@ -37,7 +37,7 @@ export default function BlogPage() {
           </h1>
           
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-            I&apos;m working on some interesting articles about web development, blockchain technology, 
+            I&apos;m working on some interesting articles about web development, backend technology, 
             and machine learning. Stay tuned for insightful content!
           </p>
         </motion.div>
@@ -126,7 +126,6 @@ export default function BlogPage() {
           <p>Check back soon for articles on:</p>
           <div className="flex flex-wrap gap-2 justify-center mt-4">
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Web Development</span>
-            <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Blockchain</span>
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Next.js</span>
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">React</span>
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Machine Learning</span>

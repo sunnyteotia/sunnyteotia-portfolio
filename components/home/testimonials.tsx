@@ -17,20 +17,44 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    id: "anil",
-    name: "Anil Nigam",
-    position: "Strategic professional with strong business acumen",
+    id: "Ravi Garg",
+    name: "Ravi Garg",
+    position: "SDE at London Based MNC",
     relation: "Mentor",
-    date: "July 1, 2024",
-    quote: "Achyut has consistently demonstrated a strong work ethic, technical proficiency, and exceptional leadership skills throughout his tenure. As a student council member, Achyut played a pivotal role in organizing and executing various student events."
+    date: "Jan 1, 2025",
+    quote: "Sunny has consistently demonstrated a strong work ethic, technical proficiency, and exceptional leadership skills throughout his tenure. As a student council member, Sunny played a pivotal role in organizing and executing various student events."
   },
   {
-    id: "revathi",
-    name: "Revathi B",
-    position: "Associate Director Student Affairs SRM AP",
+    id: "santosh",
+    name: "Santosh Upadhyay",
+    position: "Associate Professor at AKGEC",
     relation: "Manager",
-    date: "May 23, 2024",
-    quote: "I am pleased to recommend Achyut for his exceptional technical and leadership skills. As a Technical Executive, he oversaw technical operations using advanced methodologies to achieve project milestones and foster innovation."
+    date: "March 20, 2025",
+    quote: "I am pleased to recommend Sunny for his exceptional technical and leadership skills. As a Technical Executive, he oversaw technical operations using advanced methodologies to achieve project milestones and foster innovation."
+  },
+  {
+    id: "Pankaj Verma",
+    name: "Pankaj Verma",
+    position: "Ex-SDE at Snapchat",
+    relation: "Mentor",
+    date: "Feb 15, 2025",
+    quote: "Sunny is a highly skilled and dedicated developer with a strong passion for technology. He consistently delivers high-quality work and is always willing to go the extra mile to ensure project success."
+  },
+  {
+    id: "Sahil",
+    name: "Sahil",
+    position: "Product Manager at To the new",
+    relation: "Mentor",
+    date: "April 10, 2025",
+    quote: "Working with Sunny has been a fantastic experience. His ability to understand complex requirements and translate them into effective solutions is impressive. He is a great team player and always brings positive energy to the team."
+  },
+  {
+    id: "Shashank Sahu",
+    name: "Shashank Sahu",
+    position: "MERN Stack Developer at The Heion Group",
+    relation: "Colleague",
+    date: "May 5, 2025",
+    quote: "Sunny is an exceptional developer with a keen eye for detail. His problem-solving skills and ability to work under pressure make him a valuable asset to any team. I highly recommend him for any development role."
   }
 ];
 

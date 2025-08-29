@@ -36,10 +36,12 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Achyut Katiyar</h3>
+            <h3 className="text-lg font-bold">Sunny Teotia</h3>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Full Stack Developer & Machine Learning Enthusiast based in Boston,
-              specialized in creating modern web applications and blockchain solutions.
+              A passionate full-stack developer with expertise in React, Next.js, 
+              and Node.js. Currently pursuing a B.Tech in Computer Science at AKGEC,
+               with hands-on experience in building scalable web applications and 
+               solving 300+ DSA problems.
             </p>
           </div>
           
@@ -73,7 +75,7 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="/resume.pdf" 
+                  href="/Sunny_Teotia_Resume.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
@@ -140,7 +142,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center text-sm text-muted-foreground">
               <Copyright className="mr-1 h-3.5 w-3.5" />
-              <span>{new Date().getFullYear()} Achyut Katiyar. All rights reserved.</span>
+              <span>{new Date().getFullYear()} Sunny Teotia. All rights reserved.</span>
             </div>
             <div className="text-sm text-muted-foreground flex items-center gap-1.5">
               <span>Built with</span>

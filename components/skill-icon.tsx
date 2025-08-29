@@ -31,21 +31,7 @@ import {
       'panel-left': PanelLeft,
       'palette': Palette,
       'tablet': Tablet,
-      
-      // ML/Data
-      'badge-plus': BadgePlus,
-      'bar-chart': BarChart,
-      'brain': Brain,
-      'line-chart': LineChart,
-      'sigma': Sigma,
-      
-      // Blockchain
-      'coins': Coins,
-      'boxes': Boxes,
-      'link': Link,
-      'lock-keyhole': LockKeyhole,
-      'wallet': Wallet,
-      'folder-archive': FolderArchive,
+    
       
       // Cloud/DevOps
       'cloud': Cloud,

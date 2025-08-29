@@ -12,9 +12,8 @@ export function Hero() {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
   const displayedSkills = [
     "Full Stack Developer",
-    "Web3 Enthusiast",
-    "Machine Learning Practitioner",
-    "UI/UX Designer"
+    "Node.js Developer",
+    "Problem Solver"
   ];
 
   // Parallax effect setup
@@ -70,7 +69,7 @@ export function Hero() {
                 transition={{ duration: 0.5 }}
               >
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Hi, I&apos;m Achyut Katiyar
+                  Hi, I&apos;m Sunny Teotia
                 </h1>
               </motion.div>
               <motion.div
@@ -102,9 +101,9 @@ export function Hero() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="max-w-[600px] text-muted-foreground md:text-xl"
               >
-                A passionate developer with expertise in Next.js, React, Tailwind CSS,
-                and blockchain technologies. Currently pursuing a Master&apos;s in Computer Science
-                at Northeastern University.
+                A passionate full-stack developer with expertise in React, Next.js, and Node.js.
+                 Currently pursuing a B.Tech in Computer Science at AKGEC, with hands-on experience
+                  in building scalable web applications and solving 300+ DSA problems.
               </motion.p>
             </div>
             
@@ -123,8 +122,8 @@ export function Hero() {
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <a 
-                  href="/resume.pdf" 
-                  download="Achyut_Katiyar_Resume.pdf" 
+                  href="/Sunny_Teotia_Resume.pdf" 
+                  download="/Sunny_Teotia_Resume.pdf" 
                   target="_blank"                      
                   rel="noopener noreferrer"
                 >
@@ -177,7 +176,7 @@ export function Hero() {
             <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-full">
               <Image
                 src="/images/profile.jpg"
-                alt="Achyut Katiyar"
+                alt="Sunny Teotia"
                 fill
                 className="object-cover"
                 priority
