@@ -11,12 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { projects, Project } from "@/data/projects";
 import React from "react";
 
-export async function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.id, // must match [slug] param
-  }));
-}
-
 export default function ProjectPage() {
   const router = useRouter();
   const params = useParams();
