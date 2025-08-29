@@ -24,10 +24,10 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % displayedSkills.length);
-    }, 3000);
+    },3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [displayedSkills.length]);
 
   // Get icon component for social links
   const getIconComponent = (iconName: string) => {
