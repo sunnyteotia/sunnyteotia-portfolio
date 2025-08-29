@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     ],
   },
   
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      // { url: "/icon.png", type: "image/png" },
-    ],
-    // apple: { url: "/apple-touch-icon.png" },
-  },
+  // icons: {
+  //   // icon: [
+  //   //   { url: "/favicon.ico" },
+  //   //   // { url: "/icon.png", type: "image/png" },
+  //   // ],
+  //   // apple: { url: "/apple-touch-icon.png" },
+  // },
   
   alternates: {
-    canonical: "https://sunnyteotia-portfolio.onrender.com/",
+    canonical: "https://sunnyteotia.dev/",
   },
 };
 
