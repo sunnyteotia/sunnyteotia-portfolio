@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sunny Teotia | Full Stack Developer",
   description: "Full Stack Developer & DSA Enthusiast with expertise in Next.js, React, and backend technologies.",
-  metadataBase: new URL("https://sunnyteotia-portfolio.onrender.com/"),
+  metadataBase: new URL("https://sunnyteotia.dev/"),
 
   // Basic metadata
   applicationName: "Sunny Teotia Portfolio",
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://sunnyteotia-portfolio.onrender.com/",
+    url: "https://sunnyteotia.dev/",
     title: "Sunny Teotia | Full Stack Developer",
     description: "Full Stack Developer & DSA Enthusiast with expertise in Next.js, React, and backend technologies.",
     siteName: "Sunny Teotia",
     locale: "en_US",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Sunny Teotia - Portfolio",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png" },
+      // { url: "/icon.png", type: "image/png" },
     ],
-    apple: { url: "/apple-touch-icon.png" },
+    // apple: { url: "/apple-touch-icon.png" },
   },
   
   alternates: {
